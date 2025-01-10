@@ -1,0 +1,73 @@
+/* Services Section */
+.services {
+    padding: 4rem 2rem;
+    background-color: #f9f9f9; /* Background color */
+  }
+  
+  .services-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .services-header h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .services-header p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 0.5rem;
+  }
+  
+  /* Service Cards Container */
+  .services-cards {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center; 
+  }
+  
+  /* Individual Service Card */
+  .service-card {
+    flex: 1 1 22%;
+    border: 1px solid #fbb604;
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 2rem;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .service-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .service-description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+  
+  /* Service Number */
+  .service-number {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #f57c00; /* Orange color for numbers */
+    opacity: 0.2;
+    z-index: -1;
+  }
+  
