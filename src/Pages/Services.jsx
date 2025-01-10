@@ -36,9 +36,7 @@ const ServicesSection = () => {
     <section className="services">
       <div className="services-header">
         <h2>Our Features</h2>
-        <p>
-        "We are a project management solution providing real-time updates, transparent communication, and resource accessibility to streamline your construction processes.".
-        </p>
+        
       </div>
       <div className="services-cards">
         {services.map((service) => (
