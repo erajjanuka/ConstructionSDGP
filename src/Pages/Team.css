@@ -1,0 +1,98 @@
+/* Main Container */
+.team-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    background-color:white; /* Matches your highlight color */
+    padding: 50px;
+    border-radius: 0 50px 50px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Intro Section */
+  .team-intro {
+    text-align: center; /* Center-align the text */
+    max-width: 600px; /* Increase width for better visual balance */
+    margin-bottom: 50px;
+  }
+  
+  .team-intro h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color:black; /* White for contrast */
+    margin-bottom: 10px;
+  }
+  
+  .team-intro p {
+    font-size: 1rem;
+    color: #333; /* Dark gray for readability */
+  }
+  
+  /* Team Members Container */
+  .team-members {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns layout */
+    gap: 40px;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  /* Team Card */
+  .team-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+  }
+  
+  /* Team Photo */
+  .team-photo {
+    position: relative;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .team-photo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    z-index: 1;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .team-photo:hover img {
+    transform: scale(1.1); /* Slightly enlarge the image */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add shadow */
+  }
+  
+  .semi-circle {
+    width: 120px;
+    height: 120px;
+    border: 6px solid #333; /* Dark gray semi-circle */
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    border-top-color: transparent;
+    border-right-color: transparent;
+    z-index: 0;
+  }
+  
+  /* Member Name */
+  .team-card h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333; /* Dark gray for readability */
+    margin-bottom: 5px;
+  }
+  
+  .team-card p {
+    font-size: 1rem;
+    color: #666; /* Slightly lighter text for roles */
+  }
+  
