@@ -9,7 +9,7 @@ const TeamSection = () => {
     { name: "Sue Attwood", role: "Project Manager", image: "Rumal.jpeg" },
     { name: "John Smith", role: "Sales Marketing", image: "https://media.istockphoto.com/id/1311957094/photo/handsome-smiling-young-man-with-crossed-arms-portrait.jpg?s=612x612&w=0&k=20&c=zALF0xV8gL-W9IooXcbEE95aejQhYYkBslwjPMqlUxA=" },
     { name: "Venuki Mahakumbura", role: "Accountant", image: "Venuki.jpeg" },
-    { name: "Brandon Claus", role: "Manager", image: "Tharushi2.jpeg" },
+    
   ];
 
   const [animate, setAnimate] = useState(false);
