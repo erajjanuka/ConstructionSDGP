@@ -1,3 +1,4 @@
+/* Hero Section Styles */
 .hero-section {
   display: flex;
   justify-content: space-between;
@@ -7,6 +8,8 @@
   overflow: hidden;
   margin-top: 70px;
   margin-bottom: 120px;
+
+  
 }
 
 .hero-content {
@@ -79,5 +82,233 @@
   }
   100% {
     color: #fbb604; /* Highlight color */
+  }
+}
+/* Spinner Container */
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full-screen spinner */
+  background-color: #f9f9f9; /* Light background for better visibility */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999; /* Ensure it stays above all content */
+}
+
+/* Spinner Container */
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full-screen spinner */
+  background: linear-gradient(to right, #fbb604, #fff); /* Subtle gradient background */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999; /* Ensure it stays above all content */
+  overflow: hidden;
+}
+
+/* Spinner Container */
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full-screen spinner */
+  background: linear-gradient(to right, #fbb604, #fff); /* Subtle gradient background */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999; /* Ensure it stays above all content */
+  overflow: hidden;
+}
+
+/* Spinner Effect */
+.spinner {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInGlow 1.5s infinite ease-in-out;
+}
+
+.spinner::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* Circular spinner */
+  background: conic-gradient(#fbb604, #09632a, #fbb604);
+  animation: spin 1.5s linear infinite;
+}
+
+.spinner::after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+  z-index: 1;
+}
+
+/* Circular Logo */
+.spinner-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%; /* Make the logo circular */
+  overflow: hidden; /* Ensure no content outside the circle */
+  object-fit: cover; /* Maintain aspect ratio of the logo */
+  z-index: 2; /* Ensure logo is above spinner */
+  animation: pulseLogo 2s infinite ease-in-out;
+}
+
+/* Keyframes for spinning */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Keyframes for glowing fade effect */
+@keyframes fadeInGlow {
+  0% {
+    opacity: 0.6;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.6;
+    transform: scale(0.95);
+  }
+}
+
+/* Keyframes for logo pulsing */
+@keyframes pulseLogo {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+
+
+/* Responsive Design */
+
+/* For tablets and medium screens */
+@media (max-width: 1024px) {
+  .hero-section {
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 30px;
+    margin-top: 50px;
+    margin-bottom: 80px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+    margin-right: 0;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+
+  .get-started-btn {
+    padding: 12px 25px;
+    font-size: 0.9rem;
+  }
+
+  .hero-image img {
+    width: 80%;
+    height: auto;
+    border-top-left-radius: 300px;
+    border-top-right-radius: 300px;
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+
+  .hero-content {
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .get-started-btn {
+    padding: 10px 20px;
+    font-size: 0.8rem;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 200px;
+    border-top-right-radius: 200px;
+  }
+}
+
+/* For very small devices (e.g., older phones) */
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 15px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .get-started-btn {
+    padding: 8px 15px;
+    font-size: 0.7rem;
+  }
+
+  .hero-image img {
+    border-top-left-radius: 150px;
+    border-top-right-radius: 150px;
   }
 }

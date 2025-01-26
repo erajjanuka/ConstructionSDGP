@@ -7,6 +7,8 @@ import Footer from './Components/Footer';
 import HeroSection from './Pages/Hero';
 import ServicesSection from './Pages/Services';
 import TeamSection from './Pages/Team';
+import AboutUs from './Pages/AboutUs';
+import ContactUs from './Pages/ContactUs';
 
 
 
@@ -19,11 +21,11 @@ function App() {
         <Navbar />
         <Routes>
           {/* Define routes for each page */}
-          <Route path="/" element={<HeroSection />} />
+          <Route path="" element={<HeroSection />} />
           <Route path="/services" element={<ServicesSection />} />
           <Route path="/team" element={<TeamSection />} />
-          
-          
+          <Route path="AboutUs" element={<AboutUs/>}/>
+          <Route path="ContactUs" element={<ContactUs/>}/>
         </Routes>
         <Footer />
       </div>

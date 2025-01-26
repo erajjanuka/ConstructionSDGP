@@ -1,7 +1,6 @@
 import React from "react";
 import "../Pages/Services.css";
 
-
 const ServicesSection = () => {
   const services = [
     {

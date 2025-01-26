@@ -69,4 +69,85 @@
     border-top: 1px solid #333;
     padding-top: 1rem;
   }
-  
+
+
+  /* Responsive Design */
+
+/* For tablets and medium screens */
+@media (max-width: 1024px) {
+  .footer {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 1.5rem;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    flex: 1 1 30%;
+    margin: 1rem 0;
+  }
+
+  .footer-logo {
+    font-size: 1.8rem;
+  }
+
+  .footer-center h4,
+  .footer-right h4 {
+    font-size: 1.1rem;
+  }
+
+  .footer-center ul li,
+  .footer-right ul li {
+    margin-bottom: 0.4rem;
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    flex: 1 1 100%;
+    text-align: center;
+    margin: 1rem 0;
+  }
+
+  .footer-logo {
+    font-size: 1.5rem;
+  }
+
+  .footer-socials a {
+    font-size: 1.3rem;
+    margin-right: 0.4rem;
+  }
+
+  .footer-center h4,
+  .footer-right h4 {
+    font-size: 1rem;
+  }
+}
+
+/* For very small devices (e.g., older phones) */
+@media (max-width: 480px) {
+  .footer {
+    padding: 0.8rem;
+  }
+
+  .footer-logo {
+    font-size: 1.3rem;
+  }
+
+  .footer-socials a {
+    font-size: 1.2rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.8rem;
+  }
+}

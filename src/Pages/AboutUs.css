@@ -1,0 +1,134 @@
+/* Main Section Styling */
+.about-us {
+    background-color: #fff; 
+    background: linear-gradient(to right, rgba(255, 204, 128, 0.8), rgba(255, 255, 255, 0));
+
+    padding: 50px 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevent overflow for animations */
+    position: relative;
+  }
+  
+  .about-us-container {
+    display: flex;
+    flex-wrap: wrap; /* Responsive layout */
+    gap: 30px;
+    align-items: center;
+  
+  }
+  
+  /* Left Section - Image */
+  .about-image {
+    flex: 0.3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .about-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+  }
+  
+  .about-image img:hover {
+    transform: scale(1.1) rotate(3deg); 
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Right Section - Content */
+  .about-content {
+    flex: 1;
+    color: #333;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 0.3s;
+  }
+  
+  .about-content h2 {
+    font-size: 2.5rem;
+    color: #fbb604; /* Green heading */
+    margin-bottom: 20px;
+    position: relative;
+    animation: slideInLeft 1s ease-in-out forwards;
+    margin-bottom: 30px;
+  }
+  
+  .about-content h2::after {
+    content: "";
+    width: 50px;
+    height: 5px;
+    background-color: #fbb604;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    border-radius: 5px;
+  }
+  
+  .about-content p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+    
+  }
+  
+  .about-content p:hover {
+    color: #fbb604; /* Subtle hover color change */
+  }
+  
+  .about-content h3 {
+    font-size: 1.8rem;
+    color: #fbb604;
+    margin-top: 20px;
+  }
+  
+  .about-content strong {
+    font-size: 1.2rem;
+    color: #000;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-us-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about-image img {
+      max-width: 100%;
+    }
+  
+    .about-content {
+      margin-top: 20px;
+    }
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
