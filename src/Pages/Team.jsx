@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import'./Team.css'
-import { Link } from "react-router-dom";
+
 
 const TeamSection = () => {
   const teamMembers = [
     { name: "Eraj Januka", role: "Team Leader", image: "Eraj.jpeg" },
-    { name: "Carrie Abbey", role: "Photographer", image: "https://t4.ftcdn.net/jpg/02/14/74/61/360_F_214746128_31JkeaP6rU0NzzzdFC4khGkmqc8noe6h.jpg" },
-    { name: "Sue Attwood", role: "Project Manager", image: "Rumal.jpeg" },
-    { name: "John Smith", role: "Sales Marketing", image: "https://media.istockphoto.com/id/1311957094/photo/handsome-smiling-young-man-with-crossed-arms-portrait.jpg?s=612x612&w=0&k=20&c=zALF0xV8gL-W9IooXcbEE95aejQhYYkBslwjPMqlUxA=" },
-    { name: "Venuki Mahakumbura", role: "Accountant", image: "Venuki.jpeg" },
-    
+    { name: "Nimsara Mahith", role: "Member", image: "Nimsara.jpeg" },
+    { name: "Rumal Madagedara", role: "Member", image: "Rumal.jpeg" },
+    { name: "Venuki Mahakumbura", role: "Member", image: "Venuki.jpeg" },
+    { name: "Tharushi Pemasha", role: "Member", image: "Tharushi2.jpeg" },
+    { name: "Methara Nadithi", role: "Member", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjiTbRHnnNRa7CtmDfiSyB5afPUNwUlz8n0Q&s" },
   ];
 
   const [animate, setAnimate] = useState(false);
@@ -22,7 +22,6 @@ const TeamSection = () => {
     <div className={`team-section ${animate ? "animate" : ""}`} onClick={handleEnterSection}>
       <div className="team-intro">
       <h1>Meet Our Team</h1>
-        <p>Note: Lorem ipsum dolor sit amet.</p>
       </div>
       <div className="team-members">
         {teamMembers.map((member, index) => (
