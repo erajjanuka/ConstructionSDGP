@@ -4,23 +4,6 @@ import './Hero.css';
 const HeroSection = () => {
   const [loading, setLoading] = useState(true);
 
- // List of image paths
- const images = [
-  './assets/images/1.png',
-  './assets/images/2.png',
-  './assets/images/3.png',
-  './assets/images/4.png',
-  './assets/images/5.png',
-  './assets/images/6.png',
-  './assets/images/7.png',
-  './assets/images/8.png',
-  './assets/images/9.png',
-  './assets/images/10.png',
-  './assets/images/11.png',
-  './assets/images/12.png',
-  './assets/images/13.png',
-];
-
   useEffect(() => {
     // Simulate loading time (e.g., fetching data or loading resources)
     const timer = setTimeout(() => setLoading(false), 750); // Adjust time as needed
@@ -34,22 +17,39 @@ const HeroSection = () => {
           <img src="logo.png" alt="Logo" className="spinner-logo" />
         </div>
       ) : (
-        <div className="hero-section">
-          <div className="hero-content">
-            <h1>
-              <span className="highlight">Empowering Builders</span> Enabling Dreams.
-            </h1>
-            <p>
-              "Building with precision, managing every detail with excellence. From concept to completion, we transform visions into enduring realities."
-            </p>
-            <button className="get-started-btn">Get Started</button>
+        <>
+          {/* Hero Section */}
+          <div className="hero-section">
+            <div className="hero-content">
+              <h1>
+                <span className="highlight">Empowering Builders</span> Enabling Dreams.
+              </h1>
+              <p>
+                "Building with precision, managing every detail with excellence. From concept to completion, we transform visions into enduring realities."
+              </p>
+              <button className="get-started-btn">Get Started</button>
+            </div>
+            <div className="hero-image">
+              <img
+                src="https://i.pinimg.com/736x/4d/6d/ce/4d6dce9459be98e677b79655c0d37d42.jpg" 
+                alt="Construction Visual"
+              />
+            </div>
           </div>
-          <div className="hero-image">
-            <img
-              src="https://i.pinimg.com/736x/4d/6d/ce/4d6dce9459be98e677b79655c0d37d42.jpg" 
-            />
+
+          {/* New Section */}
+          <div className="middle-section">
+            <h2 className="middle-heading">Who We Are</h2>
+            <p className="middle-para">
+            We are a passionate team committed to revolutionizing Sri Lanka’s housing construction sector. Our goal is to empower small and medium enterprises with innovative solutions that streamline processes, enhance communication, and drive efficiency. With a focus on collaboration, transparency, and user-friendly technology, we aim to transform construction management into a seamless experience for all stakeholders.            </p>
+            <div className="image-container">
+              <img src="1.png" alt="Expertise 1" className="middle-image" />
+              <img src="2.png" alt="Expertise 2" className="middle-image" />
+              <img src="7.png" alt="Expertise 2" className="middle-image" />
+              <img src="10.png" alt="Expertise 2" className="middle-image" />
+            </div>
           </div>
-        </div>
+        </>
       )}
     </>
   );
