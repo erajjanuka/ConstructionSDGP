@@ -12,6 +12,8 @@ const HeroSection = () => {
 
   return (
     <>
+
+    
       {loading ? (
         <div className="spinner-container">
           <img src="logo.png" alt="Logo" className="spinner-logo" />
@@ -37,6 +39,7 @@ const HeroSection = () => {
             </div>
           </div>
 
+
           {/* New Section */}
           <div className="middle-section">
             <h2 className="middle-heading">Who We Are</h2>
@@ -48,6 +51,7 @@ const HeroSection = () => {
               <img src="7.png" alt="Expertise 2" className="middle-image" />
               <img src="10.png" alt="Expertise 2" className="middle-image" />
             </div>
+            
           </div>
         </>
       )}
